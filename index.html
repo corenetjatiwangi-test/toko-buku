@@ -9,14 +9,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --ink:#15332A;         /* deep bottle green — struktur & teks */
+    --ink:#15332A;
     --ink-soft:#2f4d43;
-    --paper:#F3EDDF;       /* kertas hangat — latar utama */
-    --paper-2:#FBF7EC;     /* kartu */
-    --brass:#B98A32;       /* aksen emas */
+    --paper:#F3EDDF;
+    --paper-2:#FBF7EC;
+    --brass:#B98A32;
     --brass-deep:#8f6a22;
-    --rust:#A9451F;        /* harga & tag */
-    --wa:#1FA855;          /* hijau WhatsApp untuk CTA utama */
+    --rust:#A9451F;
+    --wa:#1FA855;
     --wa-deep:#178446;
     --line:rgba(21,51,42,.14);
     --shadow:0 1px 2px rgba(21,51,42,.06), 0 8px 24px -12px rgba(21,51,42,.28);
@@ -39,7 +39,6 @@
   img{max-width:100%}
   .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
 
-  /* ---------- Header ---------- */
   header{
     position:sticky;top:0;z-index:40;
     background:color-mix(in srgb, var(--paper) 88%, transparent);
@@ -77,7 +76,6 @@
     border-radius:20px;display:grid;place-items:center;font-size:12px;font-weight:700;padding:0 5px;
   }
 
-  /* ---------- Hero ---------- */
   .hero{padding:64px 0 40px;position:relative;overflow:hidden}
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
   .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-deep)}
@@ -94,7 +92,6 @@
   .btn-ghost{padding:14px 8px;font-weight:600;font-size:15px;color:var(--ink);border-bottom:2px solid transparent;transition:.15s;border-radius:0}
   .btn-ghost:hover{border-color:var(--brass)}
 
-  /* shelf of spines */
   .shelf{position:relative;display:flex;justify-content:center;align-items:flex-end;gap:14px;height:340px;padding-bottom:18px}
   .shelf::after{content:"";position:absolute;left:-4%;right:-4%;bottom:0;height:14px;border-radius:4px;background:linear-gradient(var(--ink),var(--ink-soft));box-shadow:0 14px 24px -10px rgba(21,51,42,.5)}
   .spine{
@@ -115,7 +112,6 @@
   .shelf:hover .spine{transform:translateY(6px)}
   .shelf .spine:hover{transform:translateY(-14px)}
 
-  /* ---------- How it works ---------- */
   .how{padding:26px 0 8px}
   .how-inner{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
   .step{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);padding:22px 22px 20px;position:relative}
@@ -123,7 +119,6 @@
   .step h3{font-size:19px;margin:8px 0 6px}
   .step p{margin:0;font-size:14px;color:var(--ink-soft);line-height:1.55}
 
-  /* ---------- Catalog controls ---------- */
   .catalog{padding:44px 0 80px}
   .catalog-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:22px}
   .catalog-head h2{font-size:30px}
@@ -152,7 +147,6 @@
   .chip:hover{border-color:var(--brass)}
   .chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 
-  /* ---------- Grid & cards ---------- */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:26px 22px}
   .card{display:flex;flex-direction:column;transition:.2s}
   .card .cover-wrap{position:relative;perspective:900px}
@@ -181,7 +175,7 @@
   .add.in-cart{background:var(--brass);color:#fff}
   .add:disabled{background:#c3ccc7;color:#fff;cursor:not-allowed}
   .add:disabled:hover{transform:none;background:#c3ccc7}
-  /* badges & stok */
+
   .badge{position:absolute;font-size:11px;font-weight:700;padding:5px 9px;border-radius:7px;letter-spacing:.02em;z-index:2}
   .badge.disc{top:12px;left:12px;background:var(--rust);color:#fff;box-shadow:0 4px 10px -4px rgba(169,69,31,.6)}
   .badge.low{bottom:12px;left:12px;background:var(--brass);color:#fff}
@@ -197,7 +191,6 @@
   .empty-note{grid-column:1/-1;text-align:center;padding:60px 0;color:var(--ink-soft)}
   .empty-note strong{font-family:"Fraunces",serif;font-size:20px;color:var(--ink);display:block;margin-bottom:6px}
 
-  /* ---------- Cart drawer ---------- */
   .scrim{position:fixed;inset:0;background:rgba(21,51,42,.42);backdrop-filter:blur(2px);opacity:0;visibility:hidden;transition:.25s;z-index:50}
   .scrim.open{opacity:1;visibility:visible}
   .drawer{
@@ -246,7 +239,6 @@
   .btn-wa:hover{background:var(--wa-deep);transform:translateY(-1px)}
   .btn-wa:disabled{background:#b9c5bf;box-shadow:none;cursor:not-allowed;transform:none}
 
-  /* mobile sticky mini bar */
   .minibar{
     position:fixed;left:12px;right:12px;bottom:12px;z-index:45;
     background:var(--ink);color:var(--paper);border-radius:13px;padding:12px 14px;
@@ -257,7 +249,7 @@
   .minibar .mb-l{font-size:13px}
   .minibar .mb-l b{font-family:"Fraunces",serif;font-size:16px}
   .minibar .mb-go{background:var(--brass);color:#fff;font-weight:700;font-size:13.5px;padding:9px 16px;border-radius:9px}
-  /* toast */
+
   .toast{
     position:fixed;left:50%;bottom:26px;transform:translate(-50%,140%);
     background:var(--ink);color:var(--paper);font-size:14px;font-weight:500;
@@ -266,7 +258,6 @@
   }
   .toast.show{transform:translate(-50%,0);opacity:1}
 
-  /* ---------- Footer ---------- */
   footer{background:var(--ink);color:var(--paper);padding:56px 0 40px;margin-top:20px}
   .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
   footer h3{font-size:24px;color:var(--paper)}
@@ -406,7 +397,6 @@
   </div>
 </footer>
 
-<!-- Cart -->
 <div class="scrim" id="scrim"></div>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Keranjang belanja">
   <div class="drawer-head">
@@ -419,39 +409,26 @@
   <div class="drawer-foot" id="cartFoot"></div>
 </aside>
 
-<!-- Mobile mini bar -->
 <div class="minibar" id="minibar">
   <div class="mb-l"><span id="mbCount">0 buku</span> · <b id="mbTotal">Rp 0</b></div>
   <button class="mb-go" id="mbGo">Lihat keranjang</button>
 </div>
 
 <script>
-/* =========================================================
-   PENGATURAN TOKO  — ganti bagian ini saja
-   ========================================================= */
+
 const SHOP = {
   name: "Ruang Baca",
-  // Nomor WhatsApp penjual, format internasional tanpa "+" atau "0" di depan.
-  waNumber: "6289666677778"
+
+  waNumber: "6281234567890"
 };
 
-/* =========================================================
-   DATA BUKU — ganti judul/penulis/harga sesuai stokmu.
-   Field per buku:
-     price   : harga jual (wajib)
-     oldPrice: harga sebelum diskon → memunculkan harga coret + badge %-nya
-     stock   : sisa stok. 0 = tampil "Stok habis". <=3 = badge "Sisa n"
-     shade   : warna sampul tipografi (0–5)
-     image   : (opsional) URL foto sampul asli, mis. "https://.../cover.jpg"
-               kalau diisi, foto dipakai menggantikan sampul tipografi.
-   ========================================================= */
 const COVERS = [
-  {bg:"linear-gradient(150deg,#1b4a3a,#0f2f25)", cat:"#8fd3b3"}, // hijau
-  {bg:"linear-gradient(150deg,#7a2f18,#4d1c0f)", cat:"#f0b79a"}, // rust
-  {bg:"linear-gradient(150deg,#2a3b56,#152238)", cat:"#a9c1e8"}, // ink-blue
-  {bg:"linear-gradient(150deg,#5a3350,#341d30)", cat:"#e0aed4"}, // plum
-  {bg:"linear-gradient(150deg,#8a6a1f,#5c4611)", cat:"#f4dd9e"}, // mustard
-  {bg:"linear-gradient(150deg,#204b4d,#0e2b2c)", cat:"#93cfd0"}, // teal
+  {bg:"linear-gradient(150deg,#1b4a3a,#0f2f25)", cat:"#8fd3b3"},
+  {bg:"linear-gradient(150deg,#7a2f18,#4d1c0f)", cat:"#f0b79a"},
+  {bg:"linear-gradient(150deg,#2a3b56,#152238)", cat:"#a9c1e8"},
+  {bg:"linear-gradient(150deg,#5a3350,#341d30)", cat:"#e0aed4"},
+  {bg:"linear-gradient(150deg,#8a6a1f,#5c4611)", cat:"#f4dd9e"},
+  {bg:"linear-gradient(150deg,#204b4d,#0e2b2c)", cat:"#93cfd0"},
 ];
 
 const BOOKS = [
@@ -467,13 +444,11 @@ const BOOKS = [
   {id:10, title:"Kelinci yang Berani",          author:"Maya Putri",    price:59000,  cat:"Anak",      shade:0, stock:4},
   {id:11, title:"Resep Warisan Nusantara",      author:"Dapur Ibu",     price:132000, cat:"Non-Fiksi", shade:1, stock:1},
   {id:12, title:"Surat dari Masa Depan",        author:"Omar Zein",     price:79000,  oldPrice:91000, cat:"Fiksi",     shade:5, stock:7},
-  // Contoh pakai foto sampul asli:
-  // {id:13, title:"Judul", author:"Penulis", price:80000, cat:"Fiksi", shade:0, stock:5, image:"https://situsmu.com/cover.jpg"},
+
 ];
 
-/* ===================== LOGIKA ===================== */
 const rupiah = n => "Rp " + n.toLocaleString("id-ID");
-const cart = new Map();           // id -> qty
+const cart = new Map();
 let activeCat = "Semua";
 let query = "";
 let priceRange = "all";
@@ -481,7 +456,6 @@ let priceRange = "all";
 const cats = ["Semua", ...Array.from(new Set(BOOKS.map(b => b.cat)))];
 const byId = id => BOOKS.find(b => b.id === id);
 
-/* --- Hero shelf --- */
 const shelf = document.getElementById("heroShelf");
 BOOKS.slice(0,5).forEach((b,i)=>{
   const s=document.createElement("div");
@@ -493,7 +467,6 @@ BOOKS.slice(0,5).forEach((b,i)=>{
   shelf.appendChild(s);
 });
 
-/* --- Nav categories --- */
 const navCats=document.getElementById("navCats");
 cats.filter(c=>c!=="Semua").forEach(c=>{
   const a=document.createElement("a");
@@ -502,7 +475,6 @@ cats.filter(c=>c!=="Semua").forEach(c=>{
   navCats.appendChild(a);
 });
 
-/* --- Chips --- */
 const chipsEl=document.getElementById("chips");
 function renderChips(){
   chipsEl.innerHTML="";
@@ -516,7 +488,6 @@ function renderChips(){
 }
 function setCat(c){activeCat=c;renderChips();renderGrid();}
 
-/* --- Grid --- */
 const grid=document.getElementById("grid");
 const catCount=document.getElementById("catCount");
 function filtered(){
@@ -589,18 +560,17 @@ function renderGrid(){
   });
 }
 
-/* --- Cart ops --- */
 function addToCart(id){
   const b=byId(id);
   if(b.stock===0)return;
   const cur=cart.get(id)||0;
-  if(cur>=b.stock)return;           // jangan melebihi stok
+  if(cur>=b.stock)return;
   cart.set(id,cur+1);sync();openCart();
 }
 function setQty(id,d){
   const b=byId(id);
   let q=(cart.get(id)||0)+d;
-  if(q>b.stock)q=b.stock;           // batasi ke stok
+  if(q>b.stock)q=b.stock;
   if(q<=0)cart.delete(id); else cart.set(id,q);
   sync();
 }
@@ -622,7 +592,6 @@ function sync(){
   renderCart();
 }
 
-/* --- Cart drawer render --- */
 const cartItems=document.getElementById("cartItems");
 const cartFoot=document.getElementById("cartFoot");
 function renderCart(){
@@ -676,7 +645,6 @@ function renderCart(){
   document.getElementById("checkout").onclick=checkout;
 }
 
-/* --- WhatsApp checkout --- */
 function checkout(){
   if(cart.size===0)return;
   const city=(document.getElementById("fCity")?.value||"").trim();
@@ -701,7 +669,6 @@ function checkout(){
   window.open(url,"_blank");
 }
 
-/* --- Drawer open/close --- */
 const scrim=document.getElementById("scrim");
 const drawer=document.getElementById("drawer");
 let lastFocus=null;
@@ -715,11 +682,9 @@ document.getElementById("footWa").onclick=e=>{e.preventDefault();window.open(`ht
 scrim.onclick=closeCart;
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&drawer.classList.contains("open"))closeCart();});
 
-/* --- Search & price filter --- */
 document.getElementById("search").addEventListener("input",e=>{query=e.target.value;renderGrid();});
 document.getElementById("priceRange").addEventListener("change",e=>{priceRange=e.target.value;renderGrid();});
 
-/* --- Toast --- */
 function toast(msg){
   let t=document.getElementById("toast");
   if(!t){t=document.createElement("div");t.id="toast";t.className="toast";document.body.appendChild(t);}
@@ -727,7 +692,6 @@ function toast(msg){
   clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove("show"),2600);
 }
 
-/* --- Share store --- */
 async function shareStore(){
   const shareData={title:SHOP.name,text:`Belanja buku di ${SHOP.name} 📚`,url:location.href};
   try{
@@ -735,8 +699,8 @@ async function shareStore(){
     await navigator.clipboard.writeText(location.href);
     toast("Tautan toko disalin ✓");
   }catch(err){
-    if(err && err.name==="AbortError")return;      // user membatalkan share
-    // fallback terakhir: salin manual
+    if(err && err.name==="AbortError")return;
+
     try{
       const ta=document.createElement("textarea");
       ta.value=location.href;ta.style.position="fixed";ta.style.opacity="0";
@@ -748,7 +712,6 @@ async function shareStore(){
 document.getElementById("shareBtn").onclick=shareStore;
 document.getElementById("footShare").onclick=e=>{e.preventDefault();shareStore();};
 
-/* --- Init --- */
 document.getElementById("yr").textContent=new Date().getFullYear();
 renderChips();renderGrid();sync();
 </script>
